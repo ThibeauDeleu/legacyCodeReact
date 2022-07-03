@@ -1,0 +1,25 @@
+.u-text__title--lg {
+	font-size: rem(54px);
+	font-weight: 700;
+}
+
+.u-text__title--md {
+	font-size: rem(36px);
+	font-weight: 700;
+}
+
+.u-text__title--sm {
+	font-size: rem(24px);
+}
+
+.u-text__normal {
+	font-size: rem(16px);
+
+	&--bold {
+		font-weight: bold;
+	}
+
+	&--sm {
+		font-size: rem(14px);
+	}
+}

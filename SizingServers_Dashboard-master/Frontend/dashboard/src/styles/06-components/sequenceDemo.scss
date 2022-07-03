@@ -1,0 +1,5 @@
+.c-sequence-demo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, rem(224px));
+	grid-gap: var(--global-whitespace-xxl);
+}

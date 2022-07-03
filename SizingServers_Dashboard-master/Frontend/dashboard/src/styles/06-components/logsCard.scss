@@ -1,0 +1,49 @@
+
+.c-logs{
+    position: fixed;
+    background-color: var(--global-color-theme-900);
+    padding: var(--global-whitespace-md);
+    height: 100%;
+    width: rem(272px);
+
+    &__title{
+        font-size: rem(24px);
+        font-weight: bold;
+        color: var(--global-color-neutral-100);
+    }
+}
+
+.c-logs-card{
+    animation: var(--global-fade-in-animation);
+    width: rem(240px);
+    height: rem(72px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--global-color-neutral-100);
+    border-radius: 5px;
+    margin-top: var(--global-whitespace-lg);
+
+    &__icon{
+        width: rem(24px);
+        height: rem(24px);
+        color: var(--global-color-neutral-100);
+    }
+
+    &__icon-container{
+        height: inherit;
+        width: rem(40px);
+        background-color: var(--global-color-theme-400);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 0 0 5px;
+    }
+
+    &__text{
+        font-size: rem(14px);
+        line-height: rem(16px);
+        margin-left: var(--global-whitespace-sm);
+    }
+}
+

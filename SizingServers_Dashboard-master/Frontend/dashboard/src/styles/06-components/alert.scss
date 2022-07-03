@@ -1,0 +1,91 @@
+.c-alert {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--global-whitespace-sm);
+	color: var(--global-color-theme-900);
+
+	&__data{
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		width: rem(24px);
+		fill: var(--global-color-theme-500);
+		margin-right: var(--global-whitespace-sm);
+		flex-shrink: 0;
+	}
+
+	&__message {
+		font-size: rem(12px);
+		margin-right: var(--global-whitespace-sm);
+	}
+
+	&__time {
+		font-size: rem(12px);
+		color: var(--global-color-theme-900);
+	}
+
+	&.critical {
+		color: var(--global-color-neutral-900);
+		.c-alert__icon {
+			fill: var(--global-color-neutral-900);
+		}
+	}
+
+	&.warning {
+		color: var(--global-color-orange-900);
+		.c-alert__icon {
+			fill: var(--global-color-orange-500);
+		}
+	}
+
+	&.debug {
+		color: var(--global-color-purple-500);
+		.c-alert__icon {
+			fill: var(--global-color-purple-500);
+		}
+	}
+
+	&.error {
+		color: var(--global-color-red-500);
+		.c-alert__icon {
+			fill: var(--global-color-red-500);
+		}
+	}
+
+	&.info {
+		color: var(--global-color-theme-700);
+		.c-alert__icon {
+			fill: var(--global-color-theme-500);
+		}
+	}
+
+	&__button {
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		background: var(--global-color-theme-900);
+		width: 100%;
+		border-radius: 0 0 var(--global-border-radius) var(--global-border-radius);
+		color: var(--global-color-neutral-100);
+		padding: var(--global-whitespace-sm);
+		transition: var(--global-transition--small-items);
+		margin-top: var(--global-whitespace-sm);
+		cursor: pointer;
+
+		&:hover {
+			background: var(--global-color-theme-800);
+		}
+
+		&:active,
+		&:focus {
+			background: var(--global-color-theme-700);
+		}
+	}
+}
+
+.c-alert + .c-alert {
+	margin-bottom: var(--global-whitespace-sm);
+}

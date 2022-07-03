@@ -1,0 +1,54 @@
+// 01 Settings
+@import './01-settings/color-palettes.scss';
+@import './01-settings/global.scss';
+@import './01-settings/typography.scss';
+
+// 02 Tools
+@import './02-tools/functions.scss';
+@import './02-tools/mixins.scss';
+
+// 03 Generic
+@import './03-generic/reset.scss';
+
+// 04 Elements
+@import './04-elements/page.scss';
+@import './04-elements/root.scss';
+@import './04-elements/typography.scss';
+
+// 05 Objects
+@import './05-objects/row.scss';
+@import './05-objects/container.scss';
+@import './05-objects/button-reset.scss';
+@import './05-objects/hide-accessible.scss';
+
+// 06 Components
+@import './06-components/movementCard.scss';
+@import './06-components/sidebar.scss';
+@import './06-components/topbar.scss';
+@import './06-components/app.scss';
+@import './06-components/toggle.scss';
+@import './06-components/button.scss';
+@import './06-components/connectionCard.scss';
+@import './06-components/logsCard.scss';
+@import './06-components/statusScreen.scss';
+@import './06-components/heatLogsCard.scss';
+@import './06-components/loader.scss';
+@import './06-components/about.scss';
+@import './06-components/sequenceDemo.scss';
+@import './06-components/alert.scss';
+@import './06-components/messageBar.scss';
+@import './06-components/chatScreen.scss';
+@import './06-components/control.scss';
+@import './06-components/joystick.scss';
+@import './06-components/toggleButton.scss';
+@import './06-components/innerNav.scss';
+@import './06-components/detailLogs.scss';
+@import './06-components/lottieAnimations.scss';
+@import './06-components/slider.scss';
+@import './06-components/formScreens.scss';
+@import './06-components/activeIndicator.scss';
+
+// 07 Utilities
+@import './07-utilities/colors';
+@import './07-utilities/text';
+@import './07-utilities/margin-bottom';

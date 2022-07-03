@@ -1,0 +1,36 @@
+.c-joystick {
+	text-align: center;
+	margin: var(--global-whitespace-xl);
+    flex-shrink: 0;
+	flex-wrap: 1;
+
+	&__container {
+		--square: 12rem;
+
+		width: var(--square);
+		height: var(--square);
+		position: relative;
+		background-color: var(--global-color-theme-500);
+		border-radius: var(--global-border-radius);
+		
+	}
+
+	&__holder {
+		--square: 7.75rem;
+
+		position: absolute;
+
+		background-color: var(--global-color-theme-900);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+
+		width: var(--square);
+		height: var(--square);
+	}
+}

@@ -1,0 +1,52 @@
+.c-sidebar-nav {
+	&__item {
+		--border-left: rem(4px);
+		text-decoration: none;
+		background: var(--global-color-theme-500);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: var(--global-color-neutral-100);
+		padding: var(--global-whitespace-md)
+			calc(var(--global-whitespace-lg) - 0.25rem);
+		border-left: rem(4px) solid var(--global-color-theme-500);
+		transition: all 0.2s ease-out;
+		cursor: pointer;
+
+		&:hover {
+			border-left: rem(4px) solid var(--global-color-theme-800);
+			background: var(--global-color-theme-800);
+		}
+
+		&.is-active {
+			border-left: rem(4px) solid var(--global-color-neutral-100);
+			background: var(--global-color-theme-900);
+		}
+	}
+
+	&__info{
+		display: flex;
+	}
+
+	&__feedback {
+		padding: var(--global-whitespace-sm);
+		text-align: center;
+		font-weight: 700;
+		color: var(--global-color-neutral-100);
+	}
+
+	&__error {
+		color: var(--global-color-red-900);
+		background-color: var(--global-color-neutral-100);
+	}
+
+	&__text {
+		color: var(--global-color-neutral-100);
+		margin-right: var(--global-whitespace-sm);
+	}
+}
+
+.c-sidebar-nav__icon {
+	margin-right: var(--global-whitespace-sm);
+}

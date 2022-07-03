@@ -1,0 +1,9 @@
+.c-active-indicator {
+	animation: bounce-animation 3s infinite;
+	background: var(--global-color-activity-indication);
+	width: rem(12px);
+	height: rem(12px);
+	color: var(--global-color-neutral-100);
+	border-radius: 50%;
+	border: rem(2px) solid var(--global-color-neutral-100);
+}

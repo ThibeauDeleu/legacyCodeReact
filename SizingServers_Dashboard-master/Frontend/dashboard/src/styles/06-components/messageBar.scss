@@ -1,0 +1,75 @@
+.c-message-bar {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+
+	position: absolute;
+	left: rem(152px);
+	top: rem(0px);
+	right: rem(0px);
+	min-height: rem(40px);
+
+	z-index: 10;
+	transition: var(--global-transition--small-items);
+
+	&.error {
+		background-color: var(--global-color-red-500);
+	}
+
+	&.succes {
+		background-color: var(--global-color-green-500);
+	}
+
+	padding: 0 var(--global-whitespace-md);
+
+	&__text {
+		font-size: rem(14px);
+		font-weight: bold;
+		color: var(--global-color-neutral-100);
+	}
+
+	&__cross {
+		width: rem(24px);
+		height: rem(24px);
+
+		&-button {
+			all: unset;
+			width: rem(24px);
+			height: rem(24px);
+			cursor: pointer;
+		}
+	}
+
+	&.is-visible {
+		transform: translateY(rem(56px));
+	}
+
+	&__no-header {
+		top: rem(-56px);
+		min-height: rem(56px);
+		&.is-visible {
+			transform: translateY(rem(56px));
+		}
+	}
+
+	&__chatbot {
+		top: rem(96px);
+		min-height: rem(40px);
+		&.is-visible {
+			transform: translateY(rem(40px));
+		}
+	}
+}
+
+.c-message {
+	&-input {
+		border: 1px solid var(--global-color-red-500);
+	}
+
+	&-text {
+		font-size: rem(14px);
+		color: var(--global-color-red-900);
+		margin-top: var(--global-whitespace-sm);
+	}
+}

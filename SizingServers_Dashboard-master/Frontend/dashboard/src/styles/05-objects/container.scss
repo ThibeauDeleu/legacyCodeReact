@@ -1,0 +1,8 @@
+@import '../01-settings/global.scss';
+
+.o-container {
+	max-width: map-get($breakpoints, tablet);
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

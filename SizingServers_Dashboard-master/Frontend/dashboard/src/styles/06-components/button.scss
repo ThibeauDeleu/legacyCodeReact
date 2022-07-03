@@ -1,0 +1,42 @@
+.c-button {
+	background: var(--global-color-theme-900);
+	color: var(--global-color-neutral-100);
+	box-shadow: var(--global-box-shadow);
+	cursor: pointer;
+}
+
+.c-button-regular {
+	animation: var(--global-fade-in-animation);
+	text-decoration: none;
+	min-width: rem(56px);
+	padding: var(--global-whitespace-sm);
+	border-radius: var(--global-border-radius);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--global-transition--small-items);
+
+	&:hover {
+		background: var(--global-color-theme-800);
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		background: var(--global-color-theme-700);
+		box-shadow: var(--global-box-shadow--active);
+	}
+
+	&__icon {
+		margin-right: var(--global-whitespace-sm);
+		width: rem(24px);
+		fill: var(--global-color-neutral-100);
+	}
+}
+
+.c-add-robot-btn {
+	justify-content: start;
+	width: calc(100% - var(--global-whitespace-xl));
+	margin: auto;
+	margin-top: var(--global-whitespace-md);
+}

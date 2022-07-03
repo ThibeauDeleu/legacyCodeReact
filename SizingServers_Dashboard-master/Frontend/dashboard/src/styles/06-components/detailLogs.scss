@@ -1,0 +1,160 @@
+
+
+.c-logs-detail{
+
+    &-container{
+        animation: var(--global-fade-in-animation);
+        width: 100%;
+        background-color: var(--global-color-neutral-100);
+        box-shadow: var(--global-box-shadow);
+        border-radius: var(--global-border-radius);
+        margin-top: var(--global-whitespace-xxl);
+        padding: var(--global-whitespace-lg) var(--global-whitespace-lg);
+    }
+
+    &-title{
+        font-size: rem(36px);
+        color: var(--global-color-theme-900);
+    }
+
+    &-filter{
+
+        &__container{
+             
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: var(--global-whitespace-md);
+        }
+
+        &-datepicker{
+            font-family: $font-stack-alpha;
+            width: rem(180px);
+            height: rem(42px);
+            border: 1px solid var(--global-color-theme-900);
+            font-size: rem(16px);
+            border-radius: var(--global-border-radius);
+            margin-right: var(--global-whitespace-md);
+            padding: var(--global-whitespace-sm);
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 0 3px var(--global-color-theme-900);
+            }
+
+            &:active,
+            &:focus{
+                outline: none;
+                border: 1px solid var(--global-color-theme-100);
+                box-shadow: 0 0 3px var(--global-color-theme-100);
+            }
+        }
+
+        &-select{
+            outline: none;
+            width: rem(192px);
+            height: rem(42px);
+            border: 1px solid var(--global-color-theme-900);
+            border-radius: 5px;
+
+            &:hover{
+                box-shadow: 0 0 3px var(--global-color-theme-900);
+            }
+
+            &:active,
+            &:focus{
+                border: 1px solid var(--global-color-theme-100);
+                box-shadow: 0 0 3px var(--global-color-theme-100);
+            }
+        }
+    }
+
+    &-table{
+        width: 100%;
+        margin-top: var(--global-whitespace-md);
+
+        &__header{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: rem(32px);
+            background-color: var(--global-color-theme-900);
+            padding-left: var(--global-whitespace-sm);
+            border-radius: var(--global-border-radius) var(--global-border-radius) 0 0;
+
+            &-title{
+                font-size: rem(14px);
+                font-weight: bold;
+                color: var(--global-color-neutral-100);
+                align-self: center;
+            }
+        }
+
+        &__not-found{
+            padding: var(--global-whitespace-md) var(--global-whitespace-lg);
+            text-align: center;
+            width: 100%;
+        }
+
+        &__data{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: rem(50px);
+            
+            &-container{
+                border: 1px solid var(--global-color-theme-900);
+                border-radius: 0 0 var(--global-border-radius) var(--global-border-radius);
+                padding-left: var(--global-whitespace-sm);
+                padding-right: var(--global-whitespace-sm);
+            }
+
+            &-text{
+                font-size: rem(14px);
+                align-self: center;
+                flex-wrap: 1;
+            }
+
+            &-item{
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                &.critical {
+                    color: var(--global-color-neutral-900);
+                    .c-alert__icon {
+                        fill: var(--global-color-neutral-900);
+                    }
+                }   
+
+                &.warning {
+                    color: var(--global-color-orange-900);
+                     .c-alert__icon {
+                        fill: var(--global-color-orange-500);
+                    }
+                }
+
+                &.debug {
+                    color: var(--global-color-purple-500);
+                     .c-alert__icon {
+                        fill: var(--global-color-purple-500);
+                    }
+                }
+
+                &.error {
+                    color: var(--global-color-red-500);
+                     .c-alert__icon {
+                        fill: var(--global-color-red-500);
+                    }
+                }
+
+                &.info {
+                    color: var(--global-color-theme-700);
+                     .c-alert__icon {
+                        fill: var(--global-color-theme-500);
+                    }
+                }
+            }
+        }
+    }
+}
+
+

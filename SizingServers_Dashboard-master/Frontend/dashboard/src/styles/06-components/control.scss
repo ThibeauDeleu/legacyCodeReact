@@ -1,0 +1,106 @@
+.c-control {
+	animation: var(--global-fade-in-animation);
+
+	background-color: var(--global-color-neutral-100);
+	border-radius: var(--global-border-radius);
+	box-shadow: var(--global-box-shadow);
+	padding: var(--global-whitespace-lg);
+
+	height: 100%;
+
+	&.is-not-accessible {
+		.c-control__joystick,
+		.c-control__slider {
+			--global-color-theme-500: var(--global-color-neutral-300);
+			--global-color-theme-900: var(--global-color-neutral-500);
+			pointer-events: none;
+		}
+	}
+
+	&-carousel {
+		position: relative;
+		height: rem(412px);
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		&__viewport {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+
+			&-item {
+				min-width: 100%;
+			}
+
+			--transitionspeed: var(--global-transitionspeed-slow);
+
+			transition: all var(--transitionspeed) ease-out;
+
+			@include mq(tablet) {
+				--transitionspeed: var(--global-transitionspeed-md);
+			}
+		}
+
+		&.show-joystick {
+			.c-control-carousel__viewport {
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+	&__joystick {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__slider {
+		&.is-svg-slider {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-grid {
+			display: grid;
+			width: 100%;
+			grid-template-columns: repeat(auto-fill, minmax(rem(192px), 1fr));
+			grid-gap: var(--global-whitespace-xxxl);
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__activate-button {
+		background: var(--global-color-theme-900);
+
+		&.is-activated {
+			background: var(--global-color-red-900);
+
+			&:hover {
+				background: var(--global-color-red-500);
+			}
+
+			&:active,
+			&:focus {
+				box-shadow: 0 0 0 3px var(--global-color-red-900--transparent);
+			}
+		}
+
+		&.is-not-accesible {
+			background: var(--global-color-neutral-300);
+			pointer-events: none;
+		}
+	}
+}
+
+.c-control + .c-control {
+	margin-top: var(--global-whitespace-xxl);
+}

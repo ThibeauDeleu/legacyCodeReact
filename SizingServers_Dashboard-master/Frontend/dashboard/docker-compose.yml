@@ -1,0 +1,13 @@
+services:
+  sizingservers-dashboard:
+    container_name: dashboard
+    image: ghcr.io/sizingservers/robotics/dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    env_file: 
+      - .env
+    volumes: 
+       - ./shared_data/img/robots:/usr/share/nginx/html/assets/img/robots

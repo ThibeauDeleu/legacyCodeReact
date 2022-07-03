@@ -1,0 +1,19 @@
+.c-statusScreen-container{
+    // width: 100%;
+    // height: 100%;
+    display: grid;
+    // grid-gap: rem(40px);
+    grid-template-columns: 1fr rem(272px);
+
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logs{
+        // width: rem(274px);
+        height: 100vh;
+        margin: -48px 0 -48px 40px;
+    }
+}

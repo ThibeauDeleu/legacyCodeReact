@@ -1,0 +1,103 @@
+
+.c-logs-heat-categories{
+    display: flex;
+    flex-direction: row;
+
+    &__button{
+        font-size: rem(16px);
+        color: var(--global-color-neutral-900);
+        line-height: rem(24px);
+
+        height: rem(35px);
+        width: rem(80px);
+        border: none;
+        background-color: var(--global-color-neutral-200);
+        padding: 0;
+        margin-right: var(--global-whitespace-lg);
+    }
+}
+
+.is-active_categorie{
+    background-color: var(--global-color-theme-900);
+    color: var(--global-color-neutral-100);
+    // border: 1 solid var(--global-color-neutral-900);
+    border-radius: 5px;
+}
+
+.c-logs-heat-container{
+     animation: var(--global-fade-in-animation);
+    width: 100%;
+    background-color: var(--global-color-neutral-100);
+    box-shadow: var(--global-box-shadow);
+    border-radius: var(--global-border-radius);
+    padding: var(--global-whitespace-lg) var(--global-whitespace-lg);
+
+    &__title{
+        font-size: rem(36px);
+        font-weight: bold;
+        color: var(--global-color-theme-900);
+        line-height: rem(44px);
+        margin-bottom: var(--global-whitespace-md);
+    }
+}
+
+.c-logs-heat-data{
+    position: relative;
+    width: rem(210px);
+    height: rem(210px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-chart{
+        position: absolute;
+        width: rem(176px);
+        height: rem(176px);
+
+        &__base-circle{
+            fill: none;
+            stroke: var(--global-color-neutral-200);
+            stroke-width: rem(16px);
+        }
+
+        &__fill-circle{
+            // --percentage: 50;
+            --pi: 3.14159265359;
+            fill: none;
+            stroke: var(--global-color-red-500);
+            stroke-dasharray: calc(var(--percentage) * calc(2 * 40 * var(--pi)) / 100) 999;
+            stroke-width: rem(16px);
+            transform-origin: center;
+            transform: rotate(-90deg);
+            stroke-dashoffset: 0;
+            transition: all 0.5s;
+        }
+    }
+
+    &-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        
+        &__temp{
+        font-size: rem(24px);
+        font-weight: bold;
+        color: var(--global-color-red-500);
+        }
+
+        &__part{
+            font-size: rem(12px);
+            color: var(--global-color-neutral-500);
+            
+        }
+    }
+
+    &-grid{
+        display: grid;
+        grid-gap: var(--global-whitespace-xl);
+        grid-template-columns: repeat(auto-fit, 210px);
+    }
+}

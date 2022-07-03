@@ -1,0 +1,30 @@
+.c-inner-nav {
+	display: flex;
+	margin-bottom: var(--global-whitespace-xxl);
+	align-items: center;
+
+	&__button {
+		--background: var(--global-color-neutral-200);
+		--foreground: var(--global-color-theme-900);
+		padding: var(--global-whitespace-sm);
+		font-size: rem(14px);
+		font-weight: bold;
+
+		transition: var(--global-transition--small-items);
+
+		&.is-active {
+			--background: var(--global-color-theme-900);
+			--foreground: var(--global-color-neutral-100);
+			border-radius: var(--global-border-radius);
+		}
+
+		text-align: center;
+		text-decoration: none;
+		color: var(--foreground);
+		background: var(--background);
+	}
+
+	&__button + &__button {
+		margin-left: var(--global-whitespace-md);
+	}
+}

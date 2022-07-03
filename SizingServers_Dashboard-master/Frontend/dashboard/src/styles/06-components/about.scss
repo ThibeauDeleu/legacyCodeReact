@@ -1,0 +1,64 @@
+.c-about {
+	background: var(--global-color-neutral-100);
+	box-shadow: var(--global-box-shadow);
+	border-radius: var(--global-border-radius);
+	display: flex;
+	transform: translateY(72px);
+	position: relative;
+
+	&__split {
+		border: 1px solid var(--global-color-theme-900);
+		background-color: var(--global-color-theme-900);
+		opacity: 0.3;
+		border-radius: 5px;
+		margin: rem(16px) 0;
+		min-height: 100%;
+		width: 1px;
+	}
+
+	&__image {
+		--diameter: 9rem;
+		width: var(--diameter);
+		height: var(--diameter);
+		object-fit: cover;
+		background-color: var(--global-color-neutral-200);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: rem(4px) solid var(--global-color-theme-500);
+		margin-bottom: var(--global-whitespace-lg);
+		position: absolute;
+		top: -72px;
+	}
+
+	&__item {
+		width: 100%;
+		padding: var(--global-whitespace-xxl);
+		display: flex;
+		flex-direction: column;
+		animation: var(--global-fade-in-animation);
+	}
+
+	&__description {
+		max-width: rem(412px);
+		
+	}
+
+	&__left {
+		flex-direction: column;
+		align-items: center;
+		padding-top: rem(88px);
+		
+	}
+
+	&__title {
+		margin-bottom: var(--global-whitespace-md);
+	}
+
+	&__edit {
+		position: absolute;
+		top: var(--global-whitespace-lg);
+		right: var(--global-whitespace-lg);
+	}
+}
